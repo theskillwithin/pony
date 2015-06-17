@@ -81,6 +81,20 @@ nav {
         nav ul li a:hover {
           text-shadow: 0 0 0.2px black, 0 0 0.2px black, 0 0 0.2px black; }
 
+.bg2 {
+  background: linear-gradient(to bottom, transparent 50%, #660000 100%); }
+
 .bg {
   background-image: url("slider1.jpg");
-  background: linear-gradient(to bottom, transparent 50%, #660000 100%); }
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.main {
+  background-color: white;
+  height: 600px;
+  position: relative;
+  width: 1000px;
+  margin: 440px auto; }
+
+footer {
+  clear: both; }
