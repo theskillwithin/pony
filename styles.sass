@@ -1,4 +1,5 @@
 @import "bourbon"
+@import "banner"
 body
 	margin: 0px
 
@@ -79,17 +80,69 @@ nav
 				text-align: center
 				&:hover
 					text-shadow: 0 0 .2px black, 0 0 .2px black, 0 0 .2px black
+.container
+	display: flex
 .bg2
 	background: linear-gradient(to bottom, transparent 50%,rgba(102,0,0,1) 100%)
+	background-position: center top
+	background-repeat: no-repeat
+	margin: auto
 .bg
 	background-image: url("slider1.jpg")
 	background-repeat: no-repeat
-	background-position: center
+	background-position: center top
+	margin: auto
+	width: 100%
+*
+	box-sizing: border-box
+.slider
+	background-color: rgba( 92, 78, 66 , .5 )
+	width: 1000px
+	margin: 400px auto 0px auto
+	padding: 20px 0px
+	color: white
 .main
 	background-color: white
-	height: 600px
 	position: relative  // or asolute? 
 	width: 1000px
-	margin: 440px auto
+	margin: 0px auto 0px auto
+	padding: 20px
+	display: flex
+.left
+	width: 500px
+	.signup
+		//background-color: red
+		button
+			background-color: #feb742
+	.donate
+		//padding: 10px 20px
+	.recent
+		background-color: #910000
+
+.content
+	padding: 20px
 footer
-	clear: both
+	background-color: #feb742
+	height: 223px
+	width: 1000px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+	.fright
+		text-align: right
+		padding: 20px
+		line-height: 1.30
+		font-family: "Arial"
+		img
+			margin-bottom: -20px
+	.footmenu
+		padding: 20px
+		list-style-type: none
+		li 
+			padding: 2.5px
+			text-transform: uppercase
+			font-family: "Arial"
+			font-size: 12px

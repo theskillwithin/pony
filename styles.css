@@ -1,3 +1,94 @@
+.content-box {
+  position: relative;
+  /* So we can position the banner within the box */
+  background: gray;
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+
+#ribbon-container {
+  position: absolute;
+  top: 66px;
+  left: -20px;
+  overflow: visible;
+  /* so we can see the pseudo-elements we're going to add to the anchor */
+  font-size: 17px;
+  /* font-size and line-height must be equal so we can account for the height of the banner */
+  line-height: 35px; }
+
+#ribbon-container:before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: -30px;
+  border-top: 29px solid rgba(0, 0, 0, 0.3);
+  /* These 4 border properties create the first part of our drop-shadow */
+  border-bottom: 29px solid rgba(0, 0, 0, 0.3);
+  border-left: 29px solid rgba(0, 0, 0, 0.3);
+  border-right: 29px solid transparent; }
+
+#ribbon-container:after {
+  /* This adds the second part of our dropshadow */
+  content: "";
+  height: 3px;
+  background: rgba(1, 1, 1, 0.3);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 10px;
+  right: 28px; }
+
+#ribbon-container a {
+  display: block;
+  padding: 10px;
+  position: relative;
+  /* allows us to position our pseudo-elements properly */
+  background: #5e4b3e;
+  overflow: visible;
+  height: 58px;
+  margin-left: 0px;
+  color: #fff;
+  text-decoration: none;
+  font-family: Helvetica, Arial, Sans-Serif; }
+
+#ribbon-container a:before {
+  /* this creates the "folded" part of our ribbon */
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+  border-top: 15px solid #7d6452;
+  border-left: 15px solid transparent; }
+
+#ribbon-container a:after {
+  /* this creates the "forked" part of our ribbon */
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -29px;
+  border-top: 29px solid #5e4b3e;
+  border-bottom: 29px solid #5e4b3e;
+  border-left: 29px solid transparent;
+  border-right: 29px solid transparent; }
+
+#ribbon-container a:hover {
+  background: #3f322a; }
+
+#ribbon-container a:hover:after {
+  /* this makes sure that the "forked" part of the ribbon changes color with the anchor on :hover */
+  border-top: 29px solid #3f322a;
+  border-bottom: 29px solid #3f322a; }
+
 body {
   margin: 0px; }
 
@@ -81,20 +172,72 @@ nav {
         nav ul li a:hover {
           text-shadow: 0 0 0.2px black, 0 0 0.2px black, 0 0 0.2px black; }
 
+.container {
+  display: flex; }
+
 .bg2 {
-  background: linear-gradient(to bottom, transparent 50%, #660000 100%); }
+  background: linear-gradient(to bottom, transparent 50%, #660000 100%);
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin: auto; }
 
 .bg {
   background-image: url("slider1.jpg");
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center top;
+  margin: auto;
+  width: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+.slider {
+  background-color: rgba(92, 78, 66, 0.5);
+  width: 1000px;
+  margin: 400px auto 0px auto;
+  padding: 20px 0px;
+  color: white; }
 
 .main {
   background-color: white;
-  height: 600px;
   position: relative;
   width: 1000px;
-  margin: 440px auto; }
+  margin: 0px auto 0px auto;
+  padding: 20px;
+  display: flex; }
+
+.left {
+  width: 500px; }
+  .left .signup button {
+    background-color: #feb742; }
+  .left .recent {
+    background-color: #910000; }
+
+.content {
+  padding: 20px; }
 
 footer {
-  clear: both; }
+  background-color: #feb742;
+  height: 223px;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  footer .fright {
+    text-align: right;
+    padding: 20px;
+    line-height: 1.3;
+    font-family: "Arial"; }
+    footer .fright img {
+      margin-bottom: -20px; }
+  footer .footmenu {
+    padding: 20px;
+    list-style-type: none; }
+    footer .footmenu li {
+      padding: 2.5px;
+      text-transform: uppercase;
+      font-family: "Arial";
+      font-size: 12px; }
