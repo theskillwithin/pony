@@ -1,5 +1,7 @@
 @import "bourbon"
 @import "banner"
+@import "blockquote"
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower)
 body
 	margin: 0px
 
@@ -99,8 +101,10 @@ nav
 	background-color: rgba( 92, 78, 66 , .5 )
 	width: 1000px
 	margin: 400px auto 0px auto
-	padding: 20px 0px
+	padding: 6px 29px
 	color: white
+	font-family: 'Indie Flower', cursive
+	font-size: 26px
 .main
 	background-color: white
 	position: relative  // or asolute? 
@@ -109,18 +113,33 @@ nav
 	padding: 20px
 	display: flex
 .left
-	width: 500px
+	width: 35%
 	.signup
-		//background-color: red
+		margin-bottom: 100px
+		input
+			width: 164px
+			height: 25px
 		button
 			background-color: #feb742
+			height: 25px
+			border: none
+			margin-top: -4px
+			&:hover
+				cursor: pointer
 	.donate
 		//padding: 10px 20px
 	.recent
 		background-color: #910000
+		height: 300px
+		margin-bottom: 20px
+		padding: 20px
+		color: white
 
 .content
-	padding: 20px
+	padding: 20px 20px 20px 30px
+	width: 65%
+	h2
+		font-family: 'Indie Flower', cursive
 footer
 	background-color: #feb742
 	height: 223px

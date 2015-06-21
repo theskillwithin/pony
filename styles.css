@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 .content-box {
   position: relative;
   /* So we can position the banner within the box */
@@ -39,7 +40,7 @@
   display: block;
   position: absolute;
   bottom: -3px;
-  left: 10px;
+  left: 15px;
   right: 28px; }
 
 #ribbon-container a {
@@ -88,6 +89,24 @@
   /* this makes sure that the "forked" part of the ribbon changes color with the anchor on :hover */
   border-top: 29px solid #3f322a;
   border-bottom: 29px solid #3f322a; }
+
+blockquote {
+  font: 14px/20px italic Times, serif;
+  padding: 8px;
+  background-color: white;
+  margin: 5px;
+  background-image: url(openquote1.gif);
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+  font-family: "Indie Flower", cursive;
+  font-size: 20px; }
+
+blockquote span {
+  display: block;
+  background-image: url(closequote1.gif);
+  background-repeat: no-repeat;
+  background-position: bottom right; }
 
 body {
   margin: 0px; }
@@ -195,8 +214,10 @@ nav {
   background-color: rgba(92, 78, 66, 0.5);
   width: 1000px;
   margin: 400px auto 0px auto;
-  padding: 20px 0px;
-  color: white; }
+  padding: 6px 29px;
+  color: white;
+  font-family: "Indie Flower", cursive;
+  font-size: 26px; }
 
 .main {
   background-color: white;
@@ -207,14 +228,31 @@ nav {
   display: flex; }
 
 .left {
-  width: 500px; }
-  .left .signup button {
-    background-color: #feb742; }
+  width: 35%; }
+  .left .signup {
+    margin-bottom: 100px; }
+    .left .signup input {
+      width: 164px;
+      height: 25px; }
+    .left .signup button {
+      background-color: #feb742;
+      height: 25px;
+      border: none;
+      margin-top: -4px; }
+      .left .signup button:hover {
+        cursor: pointer; }
   .left .recent {
-    background-color: #910000; }
+    background-color: #910000;
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white; }
 
 .content {
-  padding: 20px; }
+  padding: 20px 20px 20px 30px;
+  width: 65%; }
+  .content h2 {
+    font-family: "Indie Flower", cursive; }
 
 footer {
   background-color: #feb742;
