@@ -187,7 +187,7 @@ footer
 		line-height: 1.30
 		font-family: "Arial"
 		img
-			margin-bottom: -20px
+			margin-bottom: -5px
 	.footmenu
 		padding: 20px
 		list-style-type: none
@@ -198,6 +198,8 @@ footer
 			font-size: 12px
 
 @media (max-width: 1000px)
+	footer
+		width: 90%
 	.main
 		width: 90%
 		flex-direction: column
@@ -222,4 +224,26 @@ footer
 			.recent
 				width: 95%
 			width: 95%
+@media (max-width: 765px)
+	.mainnav
+		z-index: 9999999
+		left: 10px
+		right: auto
+		ul
+			flex-direction: column
+			z-index: 999999999999
+			background-color: #fecf80
+			border-radius: 10px
+@media (max-width: 520px)
+	.logo
+		img
+			+size(50%)
+@media (max-width: 400px)
+	.donation
+		display: none
+	.footmenu
+		display: none
+	footer
+		.fright
+			text-align: center
 
