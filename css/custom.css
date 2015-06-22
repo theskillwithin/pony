@@ -102,10 +102,11 @@
 /* Custom navigation dots */
 
 .nav-dots {
-	text-align: center;
+	text-align: right;
 	height: 30px;
 	width: 100%;
 	z-index: 1000;
+	margin-top: -35px;  
 }
 
 .nav-dots span {
