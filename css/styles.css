@@ -229,10 +229,10 @@ header {
   background-color: rgba(92, 78, 66, 0.5);
   width: 1000px;
   margin: -250px auto 0px auto;
-  padding: 3px 29px;
+  padding: 10px 29px;
   color: white;
   font-family: "Indie Flower", cursive;
-  font-size: 35px;
+  font-size: 60px;
   z-index: 99999; }
 
 .main {
@@ -270,7 +270,6 @@ header {
   .left .recent {
     background-color: #910000;
     height: 300px;
-    width: 345px;
     margin-bottom: 20px;
     padding: 20px;
     color: white; }
@@ -280,11 +279,7 @@ header {
   width: 65%; }
   .content h2 {
     font-family: "Indie Flower", cursive;
-    padding-top: 0px;
-    font-size: 28px; }
-  .content p {
-    padding: 10px;
-    line-height: 2; }
+    padding-top: 0px; }
 
 footer {
   background-color: #feb742;
@@ -302,7 +297,7 @@ footer {
     line-height: 1.3;
     font-family: "Arial"; }
     footer .fright img {
-      margin-bottom: -5px; }
+      margin-bottom: -20px; }
   footer .footmenu {
     padding: 20px;
     list-style-type: none; }
@@ -311,67 +306,3 @@ footer {
       text-transform: uppercase;
       font-family: "Arial";
       font-size: 12px; }
-
-@media (max-width: 1000px) {
-  footer, .slidemenu {
-    width: 90%; }
-
-  .main {
-    width: 90%;
-    flex-direction: column; }
-    .main .lhshorse {
-      display: none; }
-    .main .content {
-      width: 98%; }
-    .main .left {
-      flex-direction: column;
-      margin: 0 auto;
-      text-align: center;
-      width: 95%; }
-      .main .left .recent {
-        width: 95%; }
-    .main .recent {
-      height: 190px; } }
-@media (max-width: 725px) {
-  .main .left {
-    flex-direction: column;
-    margin: 0 auto;
-    text-align: center;
-    width: 95%; }
-    .main .left .recent {
-      width: 95%; } }
-@media (max-width: 765px) {
-  .mainnav {
-    z-index: 9999999;
-    left: 10px;
-    right: auto; }
-    .mainnav ul {
-      flex-direction: column;
-      z-index: 999999999999;
-      background-color: #fecf80;
-      border-radius: 10px; } }
-@media (max-width: 520px) {
-  .logo img {
-    height: 50%;
-    width: 50%; } }
-@media (max-width: 660px) {
-  #tagline {
-    font-size: 26px; } }
-@media (max-width: 550px) {
-  #tagline {
-    font-size: 20px; } }
-@media (max-width: 500px) {
-  #tagline {
-    font-size: 16px; } }
-@media (max-width: 440px) {
-  #tagline {
-    visibility: hidden; } }
-@media (max-width: 400px) {
-  .donation {
-    display: none; }
-
-  .footmenu {
-    display: none; }
-
-  footer .fright {
-    text-align: center; } }

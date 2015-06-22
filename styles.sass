@@ -5,6 +5,7 @@
 body
 	margin: 0px
 	font-family: sans-serif
+	-webkit-font-smoothing: antialiased
 
 header
 	+linear-gradient(to top, #feb742, #fff2b4)
@@ -49,7 +50,7 @@ header
 				vertical-align: middle
 				cursor: pointer
 
-nav
+.mainnav
 	background-color: #fecf80
 	max-width: 700px
 	height: 38px
@@ -94,14 +95,16 @@ nav
 
 .container
 	display: flex
+	z-index: 999
 .bg2
-	background: linear-gradient(to bottom, transparent 0%,rgba(102,0,0,1) 23%)
+	background: linear-gradient(to bottom, transparent 0%,rgba(102,0,0,1) 12%)
 	background-position: center top
 	background-repeat: no-repeat
 	margin: 0px auto
 	width: 100%
 	top: 0px
 	position: relative
+	z-index: 9999999
 .bg
 	background-image: url("slider1.jpg")
 	background-repeat: no-repeat
@@ -110,14 +113,15 @@ nav
 	width: 100%
 *
 	box-sizing: border-box
-.slider
+.slidemenu
 	background-color: rgba( 92, 78, 66 , .5 )
 	width: 1000px
-	margin: 400px auto 0px auto
-	padding: 6px 29px
+	margin: -250px auto 0px auto
+	padding: 3px 29px
 	color: white
 	font-family: 'Indie Flower', cursive
-	font-size: 26px
+	font-size: 35px
+	z-index: 99999
 .main
 	background-color: white
 	position: relative  // or asolute? 
@@ -126,6 +130,7 @@ nav
 	padding: 20px
 	display: flex
 	box-shadow: 0px 0px 9px 1.5px rgba(0,0,0,0.75)
+	z-index: 999999
 	.quotesign
 		margin: 0px auto
 		text-align: center
@@ -148,11 +153,10 @@ nav
 			margin-top: -4px
 			&:hover
 				cursor: pointer
-	.donate
-		//padding: 10px 20px
 	.recent
 		background-color: #910000
 		height: 300px
+		width: 345px
 		margin-bottom: 20px
 		padding: 20px
 		color: white
@@ -163,6 +167,10 @@ nav
 	h2
 		font-family: 'Indie Flower', cursive
 		padding-top: 0px
+		font-size: 28px
+	p 
+		padding: 10px
+		line-height: 2
 footer
 	background-color: #feb742
 	height: 223px
@@ -179,7 +187,7 @@ footer
 		line-height: 1.30
 		font-family: "Arial"
 		img
-			margin-bottom: -20px
+			margin-bottom: -5px
 	.footmenu
 		padding: 20px
 		list-style-type: none
@@ -188,3 +196,67 @@ footer
 			text-transform: uppercase
 			font-family: "Arial"
 			font-size: 12px
+
+@media (max-width: 1000px)
+	footer, .slidemenu
+		width: 90%
+	.main
+		width: 90%
+		flex-direction: column
+		.lhshorse
+			display: none
+		.content
+			width: 98%
+		.left
+			flex-direction: column
+			margin: 0 auto
+			text-align: center
+			.recent
+				width: 95%
+			width: 95%
+		.recent
+			height: 190px
+@media (max-width: 725px)
+	.main
+		.left
+			flex-direction: column
+			margin: 0 auto
+			text-align: center
+			.recent
+				width: 95%
+			width: 95%
+@media (max-width: 765px)
+	.mainnav
+		z-index: 9999999
+		left: 10px
+		right: auto
+		ul
+			flex-direction: column
+			z-index: 999999999999
+			background-color: #fecf80
+			border-radius: 10px
+@media (max-width: 520px)
+	.logo
+		img
+			+size(50%)
+@media (max-width: 660px)
+	#tagline
+		font-size: 26px
+@media (max-width: 550px)
+	#tagline
+		font-size: 20px
+@media (max-width: 500px)
+	#tagline
+		font-size: 16px
+@media (max-width: 440px)
+	#tagline
+		visibility: hidden
+@media (max-width: 400px)
+	.donation
+		display: none
+	.footmenu
+		display: none
+	footer
+		.fright
+			text-align: center
+
