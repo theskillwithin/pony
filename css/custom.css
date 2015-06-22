@@ -103,10 +103,9 @@
 
 .nav-dots {
 	text-align: right;
-	height: 30px;
 	width: 100%;
 	z-index: 1000;
-	margin-top: -35px;  
+	margin-top: -50px;
 }
 
 .nav-dots span {

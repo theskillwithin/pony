@@ -117,11 +117,11 @@ header
 	background-color: rgba( 92, 78, 66 , .5 )
 	width: 1000px
 	margin: -250px auto 0px auto
-	padding: 6px 29px
+	padding: 3px 29px
 	color: white
 	font-family: 'Indie Flower', cursive
-	font-size: 30px
-	z-index: 9999999
+	font-size: 35px
+	z-index: 99999
 .main
 	background-color: white
 	position: relative  // or asolute? 
@@ -153,11 +153,10 @@ header
 			margin-top: -4px
 			&:hover
 				cursor: pointer
-	.donate
-		//padding: 10px 20px
 	.recent
 		background-color: #910000
 		height: 300px
+		width: 345px
 		margin-bottom: 20px
 		padding: 20px
 		color: white
@@ -168,6 +167,10 @@ header
 	h2
 		font-family: 'Indie Flower', cursive
 		padding-top: 0px
+		font-size: 28px
+	p 
+		padding: 10px
+		line-height: 2
 footer
 	background-color: #feb742
 	height: 223px
@@ -193,3 +196,30 @@ footer
 			text-transform: uppercase
 			font-family: "Arial"
 			font-size: 12px
+
+@media (max-width: 1000px)
+	.main
+		width: 90%
+		flex-direction: column
+		.lhshorse
+			display: none
+		.content
+			width: 98%
+		.left
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			height: 200px
+			width: 98%
+		.recent
+			height: 190px
+@media (max-width: 725px)
+	.main
+		.left
+			flex-direction: column
+			margin: 0 auto
+			text-align: center
+			.recent
+				width: 95%
+			width: 95%
+
