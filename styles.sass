@@ -198,7 +198,7 @@ footer
 			font-size: 12px
 
 @media (max-width: 1000px)
-	footer
+	footer, .slidemenu
 		width: 90%
 	.main
 		width: 90%
@@ -208,11 +208,12 @@ footer
 		.content
 			width: 98%
 		.left
-			display: flex
-			flex-direction: row
-			justify-content: space-between
-			height: 200px
-			width: 98%
+			flex-direction: column
+			margin: 0 auto
+			text-align: center
+			.recent
+				width: 95%
+			width: 95%
 		.recent
 			height: 190px
 @media (max-width: 725px)
@@ -238,6 +239,18 @@ footer
 	.logo
 		img
 			+size(50%)
+@media (max-width: 660px)
+	#tagline
+		font-size: 26px
+@media (max-width: 550px)
+	#tagline
+		font-size: 20px
+@media (max-width: 500px)
+	#tagline
+		font-size: 16px
+@media (max-width: 440px)
+	#tagline
+		visibility: hidden
 @media (max-width: 400px)
 	.donation
 		display: none
