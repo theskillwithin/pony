@@ -1,3 +1,27 @@
+$(document).ready(function() {
+  $('.box-shadow-menu').click(function() {
+      $('.mainnav').addClass( "open");
+  });
+  $('html').on('touchstart', function() {
+      $('.mainnav').removeClass( "open");
+  });
+    $('html').click(function() {
+      $('.mainnav').removeClass( "open");
+  });
+  $('.mainnav').click(function() {
+      event.stopPropagation();
+  });
+  $('.box-shadow-menu').click(function() {
+      event.stopPropagation();
+  });
+    $('.mainnav').on('touchstart', function() {
+      event.stopPropagation();
+  });
+  $('.box-shadow-menu').on('touchstart', function() {
+      event.stopPropagation();
+  });
+});
+
 // back to top button
 $(document).ready(function() {
     var offset=250, // At what pixels show Back to Top Button
