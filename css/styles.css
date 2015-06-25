@@ -176,13 +176,31 @@ header {
     list-style-type: none;
     padding: 0px 7px;
     margin: 0px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex; }
     .mainnav ul li {
       float: left;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
       text-align: center; }
       .mainnav ul li a {
         text-decoration: none;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
         display: flex;
         color: black;
         width: 100%;
@@ -328,6 +346,38 @@ footer {
     opacity: 1;
     transition: 1s; }
 
+.box-shadow-menu {
+  visibility: hidden;
+  position: relative;
+  padding-left: 1.25em;
+  position: fixed;
+  right: 20px;
+  top: 40px;
+  background-color: #feb742;
+  border-radius: 10px;
+  color: black;
+  padding: 10px;
+  padding-left: 20px;
+  z-index: 99999999;
+  border: 2px solid white; }
+
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0.25em;
+  top: 1em;
+  width: 1em;
+  height: 0.15em;
+  background: black;
+  box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black; }
+
+.open {
+  right: 0px !important; }
+
+.hcontain {
+  max-width: 700px;
+  margin: 0 auto; }
+
 @media (max-width: 1000px) {
   footer, .slidemenu {
     width: 90%; }
@@ -356,14 +406,29 @@ footer {
     width: 95%; }
     .main .left .recent {
       width: 95%; } }
-@media (max-width: 765px) {
+@media only screen and (max-width: 765px) {
+  .box-shadow-menu {
+    visibility: visible; }
+
   .mainnav {
-    z-index: 999;
-    left: 0px;
-    right: auto;
-    position: fixed; }
+    z-index: 999999999;
+    right: -155px;
+    top: 20px;
+    position: fixed;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
     .mainnav ul {
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      box-orient: vertical;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
       flex-direction: column;
+      -ms-flex-direction: column;
       z-index: 999;
       background-color: #fecf80;
       border-radius: 10px; } }

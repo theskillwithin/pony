@@ -6,7 +6,12 @@ body
 	margin: 0px
 	font-family: sans-serif
 	-webkit-font-smoothing: antialiased
-
+.hcontain
+	max-width: 1000px
+	height: 144px
+	margin: 0 auto
+	display: block
+	position: relative
 header
 	+linear-gradient(to top, #feb742, #fff2b4)
 	width: 100%
@@ -18,9 +23,11 @@ header
 		position: absolute
 		top: 55px
 		letter-spacing: 2px
-		right: 10px
+		right: 0px
 		color: #910000
 		font-weight: bold
+		width: 250px
+		text-align: right
 	.social
 		position: absolute
 		top: 10px
@@ -52,7 +59,7 @@ header
 
 .mainnav
 	background-color: #fecf80
-	max-width: 700px
+	width: 700px
 	height: 38px
 	font-size: 13px
 	font-family: "Arial"
@@ -61,18 +68,20 @@ header
 	margin: 0px
 	display: inline-block
 	position: absolute
-	right: 10%
+	right: 0px
 	+border-top-radius(13px)
-	bottom: 0px
+	bottom: -106px
 	ul
 		list-style-type: none
 		padding: 0px 7px
-		margin: 0px
+		margin: 0px auto
+		text-align: center
 		+display(flex)
 		li
 			float: left
 			+display(flex)
 			text-align: center
+			margin: 0 auto
 			a 
 				text-decoration: none
 				+display(flex)
@@ -137,6 +146,7 @@ header
 		display: table
 		font-size: 18px
 		font-family: sans-serif
+		line-height: 1.2
 		img
 			vertical-align: middle
 .left
@@ -167,10 +177,11 @@ header
 	h2
 		font-family: 'Indie Flower', cursive
 		padding-top: 0px
-		font-size: 28px
+		font-size: 30px
 	p 
 		padding: 10px
 		line-height: 2
+		font-size: 16px
 footer
 	background-color: #feb742
 	height: 223px
@@ -239,6 +250,7 @@ footer
 	box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black
 .open 
 	right:  0px !important
+
 @media (max-width: 1000px)
 	footer, .slidemenu
 		width: 90%
@@ -272,9 +284,10 @@ footer
 		visibility: visible
 	.mainnav
 		z-index: 999999999
-		right: -155px
+		right: -165px
 		top: 20px
 		position: fixed
+		width: 160px
 		+transition
 		ul
 			+flex-direction(column)
