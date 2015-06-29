@@ -246,11 +246,17 @@ header {
   z-index: 9999999; }
 
 .bg {
-  background-image: url("slider1.jpg");
+  background-image: url("images/1.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   margin: auto;
   width: 100%; }
+
+.staticslide {
+  position: absolute;
+  top: 200px !important;
+  background-size: cover !important;
+  height: 280px !important; }
 
 * {
   box-sizing: border-box; }
